@@ -9,6 +9,7 @@ router.get('/', function (req, res, next) {
     if (!err) {
       console.log('Quizes are: ', quizes)
       // res.send(quizes)
+      quizes = [{ name: 'Islam' }, { name: 'Ahmed' }, { name: 'Mustafa' }]
       res.render('index', { title: 'Islam Mesha', quizes })
     } else {
       res.sendStatus(500)
