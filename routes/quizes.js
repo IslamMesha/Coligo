@@ -8,8 +8,8 @@ router.get('/', function (req, res, next) {
   quizModel.find({}, (err, quizes) => {
     if (!err) {
       console.log('Quizes are: ', quizes)
-      res.send(quizes)
-      // res.render('index', { title: 'Islam Mesha', quizes })
+      // res.send(quizes)
+      res.render('index', { title: 'Islam Mesha', quizes })
     } else {
       res.sendStatus(500)
     }
